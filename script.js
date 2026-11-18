@@ -100,6 +100,21 @@ document.addEventListener('DOMContentLoaded', function () {
                     badgeText: '2 produits',
                     products: [
                          {
+                            id: 'HONEY BANANA🍯🍌',
+                            name: 'HONEY BANANA🍯🍌',
+                            farm: 'CaliDreamSelection ✅️',
+                            promoEligible: false,
+                            type: 'Hash',
+                            image: 'ProductHB.png',
+                            video: 'VideoHB.mp4',
+                            description: `75/90u 🔥`,
+                            tarifs: [
+                                { weight: '2g', price: 80.00 },
+                                { weight: '5g', price: 160.00 },
+                                { weight: '10g', price: 300.00 },
+                            ]
+                        },
+                         {
                             id: 'RED DRAGON🐉🔴',
                             name: 'RED DRAGON 🐉🔴',
                             farm: 'CaliDreamSelection ✅️',
@@ -114,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function () {
                                 { weight: '10g', price: 380.00 },
                             ]
                         },
-                         {
+                         /* {
                             id: 'COOKIES&CRÈME🍪🍦',
                             name: 'COOKIES&CRÈME 🍪🍦',
                             farm: 'CaliDreamSelection ✅️',
@@ -128,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function () {
                                 { weight: '5g', price: 190.00 },
                                 { weight: '10g', price: 380.00 },
                             ]
-                        },
+                        }, */
                     ]
                 },
                 {
