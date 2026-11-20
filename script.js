@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         {
             name: 'STAFF TELEGRAM 🗣',
-            url: 'https://t.me/DREAMSAVV33',
+            url: 'https://t.me/DREAMSAV33',
             icon: '#icon-telegram',
             id: 'telegram-main',
             className: 'telegram-main',
@@ -95,6 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
             farms: [
                 {
                     id: 'wpff',
+                    bestSeller: true,
                     name: 'WPFF 🍯🥶',
                     image: '',
                     badgeText: '2 produits',
@@ -212,6 +213,7 @@ LEMON CHERRY GÉLATO🍋🍒`,
                 
                 {
                     id: 'FRESH FROZEN',
+                    bestSeller: true,
                     name: '💦 RÉAL FRESH FROZEN 🥵',
                     image: '',
                     badgeText: '1 produit',
@@ -632,7 +634,7 @@ LEMON CHERRY GÉLATO🍋🍒`,
             farm: '',
             type: 'EXTRA',
             quality: '🎒 ZIP / EXTRA 🎒',
-            image: 'CategExctra.png', // Tu peux changer l'image
+            image: 'CategExtra.png', // Tu peux changer l'image
             farms: [
                 {
                     id: 'OLIVE_GUYANE',
@@ -918,6 +920,12 @@ LEMON CHERRY GÉLATO🍋🍒`,
             return;
         }
 
+        // Les best sellers sont les produits des sous-catégories WPFF et FRESH FROZEN.
+        // On utilise les objets produits eux-mêmes pour éviter les collisions d'ID.
+        const bestSellerProducts = new Set(
+            category.farms.filter(farm => farm.bestSeller).flatMap(farm => farm.products)
+        );
+
         const filteredProducts = allProducts.filter(product => {
             const searchMatch = product.name.toLowerCase().includes(currentFilters.searchTerm.toLowerCase());
             const farmMatch = currentFarmId ? true : (currentFilters.farm === 'all' || product.farm === currentFilters.farm);
@@ -949,11 +957,17 @@ LEMON CHERRY GÉLATO🍋🍒`,
 
                 let flagHTML = product.flag ? `<span class="product-flag">${product.flag}</span>` : '';
                 
+                // Badge discret sur la photo des produits BEST SELLERS (coin supérieur droit).
+                const bestSellerBadge = bestSellerProducts.has(product)
+                    ? '<span class="best-seller-product-badge">⭐ BEST SELLERS</span>'
+                    : '';
+
                 // LIGNE AJOUTÉE ICI : On affiche l'image QUE si elle n'est pas vide
                 let imgHTML = product.image ? `<img src="${product.image}" alt="${product.name}">` : '';
 
                 card.innerHTML = `
                 ${imgHTML}
+                ${bestSellerBadge}
                 <div class="info" style="${!product.image ? '' : ''}">
                     <div class="name" style="${!product.image ? 'font-size: 1.2rem;' : ''}">${product.name} ${flagHTML}</div>
                     <div class="farm" style="${!product.image ? 'font-size: 1rem; margin-bottom: 10px;' : ''}">${product.farm}</div>
