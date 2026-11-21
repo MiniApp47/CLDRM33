@@ -101,6 +101,21 @@ document.addEventListener('DOMContentLoaded', function () {
                     badgeText: '2 produits',
                     products: [
                          {
+                            id: 'RAIMBOW CREAM🍬',
+                            name: 'RAIMBOW CREAM🍬',
+                            farm: 'CaliDreamSelection ✅️',
+                            promoEligible: false,
+                            type: 'Hash',
+                            image: 'ProductRC.jpg',
+                            video: 'VideoRC.mp4',
+                            description: `PRIVATE SÉLECTION🔬🧪 \n PROVENANCE THAILANDE🇹🇭`,
+                            tarifs: [
+                                { weight: '2g', price: 80.00 },
+                                { weight: '5g', price: 160.00 },
+                                { weight: '10g', price: 300.00 },
+                            ]
+                        },
+                         {
                             id: 'HONEY BANANA🍯🍌',
                             name: 'HONEY BANANA🍯🍌',
                             farm: 'CaliDreamSelection ✅️',
@@ -583,6 +598,30 @@ LEMON CHERRY GÉLATO🍋🍒`,
             quality: ' 🪴 Weed 🪴',
             image: 'CategWeed.png',
             farms: [
+                {
+                    id: 'CALI USA 🇺🇸',
+                    name: 'CALI USA 🇺🇸',
+                    image: '',
+                    badgeText: '1 produit',
+                    products: [
+                        {
+                            id: 'STRAMBERRY LEMON🍓🍋',
+                            name: 'STRAMBERRY LEMON 🍓🍋',
+                            farm: 'PRIVATE SÉLECTION🔬🧪',
+                            promoEligible: false,
+                            type: 'Weed',
+                            image: 'ProductSLM.jpg',
+                            video: '',
+                            description: `PROVENANCE AMÉRIQUE 🇺🇸`,
+                            tarifs: [
+                                { weight: '5g', price: 70.00 },
+                                { weight: '10g', price: 130.00 },
+                                { weight: '25g', price: 220.00 },
+                                { weight: '50g', price: 400.00 },
+                            ]
+                        },
+                          ]
+                },
                 {
                     id: 'CALI SPAIN🇪🇸',
                     name: 'CALI SPAIN🇪🇸',
