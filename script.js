@@ -153,6 +153,57 @@ document.addEventListener('DOMContentLoaded', function () {
                     image: '',
                     badgeText: '2 produits',
                     products: [
+                        {
+                            id: 'PANACOTA',
+                            name: 'PANACOTA',
+                            farm: 'GAZ SÉLECTION FARMS👩‍🌾',
+                            promoEligible: false,
+                            type: 'Hash',
+                            image: 'ProductPAN.jpg',
+                            video: 'VideoPAN.mp4',
+                            description: 'DRY SIFT PREMIUM 🪵',
+                            tarifs: [
+                                { weight: '5g', price: 50.00 },
+                                { weight: '10g', price: 90.00 },
+                                { weight: '25g', price: 150.00 },
+                                { weight: '50g', price: 240.00 },
+                                { weight: '100g', price: 380.00 }
+                            ]
+                        },
+                        {
+                            id: 'MANGOSH🥭',
+                            name: 'MANGOSH🥭',
+                            farm: 'GAZ SÉLECTION FARMS👩‍🌾',
+                            promoEligible: false,
+                            type: 'Hash',
+                            image: 'ProductMAN.jpg',
+                            video: 'VideoMAN.mp4',
+                            description: 'DRY SIFT PREMIUM 🪵',
+                            tarifs: [
+                                { weight: '5g', price: 50.00 },
+                                { weight: '10g', price: 90.00 },
+                                { weight: '25g', price: 150.00 },
+                                { weight: '50g', price: 240.00 },
+                                { weight: '100g', price: 380.00 }
+                            ]
+                        },
+                        {
+                            id: 'TIRAMISU🧁',
+                            name: 'TIRAMISU🧁',
+                            farm: 'GAZ SÉLECTION FARMS👩‍🌾',
+                            promoEligible: false,
+                            type: 'Hash',
+                            image: 'ProductTIR.jpg',
+                            video: 'VideoTIR.mp4',
+                            description: 'DRY SIFT PREMIUM 🪵',
+                            tarifs: [
+                                { weight: '5g', price: 50.00 },
+                                { weight: '10g', price: 90.00 },
+                                { weight: '25g', price: 150.00 },
+                                { weight: '50g', price: 240.00 },
+                                { weight: '100g', price: 380.00 }
+                            ]
+                        },
                         /*  {
                             id: 'FILTRED 120/220u ⚡',
                             name: 'FILTRED 120/220u ⚡',
@@ -218,6 +269,22 @@ LEMON CHERRY GÉLATO🍋🍒`,
                     image: '',
                     badgeText: '1 produit',
                     products: [
+                        {
+                            id: 'PEACH TSUNAMI 🍑🌊',
+                            name: 'PEACH TSUNAMI 🍑🌊',
+                            farm: '⛽ GAZ SÉLECTION',
+                            promoEligible: false,
+                            type: 'FRESH FROZEN',
+                            image: 'ProductPTS.png',
+                            video: '',
+                            description: '',
+                            tarifs: [
+                                { weight: '5g', price: 70.00 },
+                                { weight: '10g', price: 130.00 },
+                                { weight: '25g', price: 250.00 },
+                                { weight: '50g', price: 450.00 }
+                            ]
+                        },
                         {
                             id: 'CHERRY ZONP🍒',
                             name: 'CHERRY ZONP🍒',
@@ -325,7 +392,7 @@ LEMON CHERRY GÉLATO🍋🍒`,
                     image: '',
                     badgeText: '1 produit',
                     products: [
-                        {
+                       /*  {
                             id: 'MANDARINA🍊',
                             name: 'MANDARINA🍊',
                             farm: 'CALI DREAM33™ 🇲🇦🇺🇸🇫🇷 PRIVATE SELECTION🔬🧪',
@@ -341,7 +408,7 @@ LEMON CHERRY GÉLATO🍋🍒`,
                                 { weight: '50g', price: 400.00 },
                                 { weight: '100g', price: 750.00 }
                             ]
-                        },
+                        }, */
                         {
                             id: 'BLACK CHERRY PUNCH🍒🥊',
                             name: 'BLACK CHERRY PUNCH🍒🥊',
@@ -384,7 +451,7 @@ LEMON CHERRY GÉLATO🍋🍒`,
                                 { weight: '100g', price: 900.00 }
                             ]
                         },
-                        {
+                        /* {
                             id: 'pinacolada 🍹',
                             name: 'Pinacolada 🍹',
                             farm: 'STATIC NO FARMZ 🍃',
@@ -418,7 +485,7 @@ LEMON CHERRY GÉLATO🍋🍒`,
                                 { weight: '50g', price: 480.00 },
                                 { weight: '100g', price: 900.00 }
                             ]
-                        },
+                        }, */
                        /*  {
                             id: 'PLASMASTATIC 🍋',
                             name: 'PLASMASTATIC 💥',
