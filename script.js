@@ -1814,7 +1814,7 @@ LEMON CHERRY GÉLATO🍋🍒`,
             }
 
             // Compte Telegram qui reçoit la commande.
-            const targetUsername = 'DREAMSAVV33';
+            const targetUsername = 'DREAMSAV33';
 
             let message = formatOrderMessage();
             message = message.replace(/\*/g, '');
