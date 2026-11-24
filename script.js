@@ -732,43 +732,7 @@ LEMON CHERRY GÉLATO🍋🍒`,
                         } */
                   
             ]
-        },
- // --- Catégorie 3: ZIP (Extra) ---
-        {
-            id: 'ZIP',
-            name: '🎒 ZIP / EXTRA 🎒',
-            farm: '',
-            type: 'EXTRA',
-            quality: '🎒 ZIP / EXTRA 🎒',
-            image: 'CategExtra.png', // Tu peux changer l'image
-            farms: [
-                {
-                    id: 'OLIVE_GUYANE',
-                    name: '🇵🇪 SPÉCIALITÉS 🇵🇪',
-                    image: '',
-                    badgeText: '1 produit',
-                    products: [
-                       /*  {
-                            id: 'PAVÉ',
-                            name: 'PAVÉ 🇵🇪',
-                            farm: 'PROVENANCE PÉROU 🇵🇪',
-                            promoEligible: false,
-                            type: 'Extra',
-                            image: 'ProductPave.png',
-                            video: '',
-                            description: 'PAVÉ PROVENANCE PÉROU 🇵🇪\n\nPureté 0,96. Qualité extrême pour utilisateurs avertis.',
-                            tarifs: [
-                                { weight: '1g', price: 60.00 },
-                                { weight: '2g', price: 110.00 },
-                                { weight: '5g', price: 220.00 },
-                                { weight: '10g', price: 400.00 }
-                            ]
-                        } */
-                    ]
-                }
-            ]
-        }
-       
+        },       
     ];
 
     // --- VARIABLES D'ÉTAT ---
@@ -1832,7 +1796,60 @@ LEMON CHERRY GÉLATO🍋🍒`,
         }
     });
 
+
+    // Barrière visuelle dans la mini-app. Côté client uniquement : n'est pas
+    // une preuve d'identité ni une validation anti-bot côté serveur.
+    function setupHumanGate() {
+        const gate=document.getElementById('cd33-human-gate');
+        const image=document.getElementById('cd33-human-picture');
+        const result=document.getElementById('cd33-human-result');
+        if (!gate || !image) return;
+        document.documentElement.classList.add('cd33-locked');
+        document.body.classList.add('cd33-locked');
+        let angle=0,attempts=0,lockedUntil=0,passed=false;
+        const angles=[45,90,135,180,225,270,315];
+        function challenge(){
+            if (Date.now()<lockedUntil || passed) return;
+            angle=angles[Math.floor(Math.random()*angles.length)];
+            image.style.transform=`rotate(${angle}deg)`;
+            result.textContent='';
+        }
+        function rotate(by){
+            if (Date.now()<lockedUntil || passed) return;
+            angle=(angle+by+360)%360;
+            image.style.transform=`rotate(${angle}deg)`;
+            result.textContent='';
+        }
+        document.getElementById('cd33-human-left').addEventListener('click',()=>rotate(-45));
+        document.getElementById('cd33-human-right').addEventListener('click',()=>rotate(45));
+        document.getElementById('cd33-human-refresh').addEventListener('click',challenge);
+        document.getElementById('cd33-human-verify').addEventListener('click',()=>{
+            if (passed) return;
+            if (Date.now()<lockedUntil){
+                result.textContent='Patiente avant de réessayer.';
+                return;
+            }
+            if (angle===0){
+                passed=true;
+                result.textContent='✅ Vérification réussie !';
+                document.documentElement.classList.remove('cd33-locked');
+                document.body.classList.remove('cd33-locked');
+                tg?.HapticFeedback?.notificationOccurred?.('success');
+                setTimeout(()=>gate.remove(),300);
+            } else {
+                attempts++;
+                if (attempts>=5){
+                    lockedUntil=Date.now()+20000;
+                    attempts=0;
+                    result.textContent='Trop d’essais, réessaie dans 20 secondes.';
+                } else result.textContent=`Pas encore droit · ${5-attempts} essai(s) restant(s).`;
+            }
+        });
+        challenge();
+    }
+
     function init() {
+        setupHumanGate();
         setTimeout(() => {
             populateFilters();
             renderHomePage();

@@ -1552,6 +1552,24 @@
             animation: floatIcon 2.5s ease-in-out infinite; /* Déclencheur de l'animation en boucle */
         }
 
+    
+/* CALIDREAM33 : CAPTCHA VISUEL À ROTATION */
+html.cd33-locked,body.cd33-locked{overflow:hidden!important}
+#cd33-human-gate{position:fixed;inset:0;z-index:99999;background:rgba(8,7,16,.96);display:flex;align-items:center;justify-content:center;padding:22px;box-sizing:border-box;color:#fff;font-family:Roboto,Arial,sans-serif;backdrop-filter:blur(14px)}
+#cd33-human-gate[hidden]{display:none!important}
+.cd33-gate-card{width:min(100%,380px);background:linear-gradient(145deg,#272035,#14111f);border:1px solid #cf81a0;border-radius:24px;box-shadow:0 20px 90px #000b,0 0 35px #cf81a034;padding:24px;text-align:center;box-sizing:border-box}
+.cd33-gate-title{font-size:1.25rem;font-weight:800;margin:7px 0;color:#fff}
+.cd33-gate-sub{font-size:.9rem;color:#ccc;margin:6px 0 18px;line-height:1.5}
+.cd33-picture-wrap{width:190px;height:190px;border-radius:50%;border:2px dashed #cf81a0;margin:0 auto 18px;display:flex;align-items:center;justify-content:center;background:#0f0d19;overflow:hidden}
+#cd33-human-picture{width:145px;height:145px;object-fit:contain;transition:transform .25s ease;user-select:none;-webkit-user-drag:none}
+.cd33-gate-rotators{display:flex;justify-content:center;gap:18px;margin-bottom:16px}
+.cd33-gate-rotators button,.cd33-gate-submit,.cd33-gate-refresh{color:#fff;cursor:pointer;border-radius:12px;font-size:1rem}
+.cd33-gate-rotators button{background:#34253d;border:1px solid #cf81a0;padding:12px 28px}
+.cd33-gate-submit{width:100%;padding:14px;background:linear-gradient(100deg,#aa5f9d,#7343b1);border:0;font-weight:800}
+.cd33-gate-refresh{padding:10px 14px;border:0;background:transparent;color:#dba8cf;margin-top:5px}
+#cd33-human-result{min-height:20px;font-size:.9rem;color:#f3bfd7;margin:10px auto 0}
+@media (prefers-reduced-motion:reduce){#cd33-human-picture{transition:none}}
+
     </style>
 </head>
 
@@ -1755,6 +1773,24 @@
 
         </defs>
     </svg>
+
+
+    <!-- Vérification visuelle d'accès CALIDREAM33 (interface côté navigateur) -->
+    <div id="cd33-human-gate" role="dialog" aria-modal="true" aria-labelledby="cd33-human-title">
+      <div class="cd33-gate-card">
+        <div style="font-size:1.6rem">🛡️</div>
+        <div id="cd33-human-title" class="cd33-gate-title">CaliDream33 · Sécurité</div>
+        <p class="cd33-gate-sub">Tourne le logo pour le remettre parfaitement à l'endroit, puis vérifie.</p>
+        <div class="cd33-picture-wrap"><img src="Logo.jpg" id="cd33-human-picture" alt="Logo CaliDream33 à remettre droit"></div>
+        <div class="cd33-gate-rotators">
+          <button id="cd33-human-left" type="button" aria-label="Rotation à gauche">↶ 45°</button>
+          <button id="cd33-human-right" type="button" aria-label="Rotation à droite">45° ↷</button>
+        </div>
+        <button id="cd33-human-verify" class="cd33-gate-submit" type="button">✓ Vérifier l'image</button>
+        <button id="cd33-human-refresh" class="cd33-gate-refresh" type="button">Changer l'orientation</button>
+        <div id="cd33-human-result" role="status" aria-live="polite"></div>
+      </div>
+    </div>
 
     <div id="page-loader" class="page active">
         <div class="loader-box">
