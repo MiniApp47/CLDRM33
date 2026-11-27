@@ -110,9 +110,10 @@ document.addEventListener('DOMContentLoaded', function () {
                             video: 'VideoRC.mp4',
                             description: `PRIVATE SÉLECTION🔬🧪 \n PROVENANCE THAILANDE🇹🇭`,
                             tarifs: [
-                                { weight: '2g', price: 80.00 },
-                                { weight: '5g', price: 160.00 },
-                                { weight: '10g', price: 300.00 },
+                                { weight: '1g', price: 40.00 },
+                                { weight: '2g', price: 60.00 },
+                                { weight: '5g', price: 130.00 },
+                                { weight: '10g', price: 240.00 },
                             ]
                         },
                          {
@@ -125,9 +126,10 @@ document.addEventListener('DOMContentLoaded', function () {
                             video: 'VideoHB.mp4',
                             description: `75/90u 🔥`,
                             tarifs: [
-                                { weight: '2g', price: 80.00 },
-                                { weight: '5g', price: 160.00 },
-                                { weight: '10g', price: 300.00 },
+                                { weight: '1g', price: 40.00 },
+                                { weight: '2g', price: 60.00 },
+                                { weight: '5g', price: 130.00 },
+                                { weight: '10g', price: 240.00 },
                             ]
                         },
                         /*  {
@@ -459,11 +461,10 @@ LEMON CHERRY GÉLATO🍋🍒`,
                             video: 'VideoGR.mp4',
                             description: '',
                             tarifs: [
-                                { weight: '5g', price: 80.00 },
-                                { weight: '10g', price: 150.00 },
-                                { weight: '25g', price: 280.00 },
-                                { weight: '50g', price: 480.00 },
-                                { weight: '100g', price: 900.00 }
+                                { weight: '5g', price: 70.00 },
+                                { weight: '10g', price: 130.00 },
+                                { weight: '25g', price: 200.00 },
+                                { weight: '50g', price: 380.00 },
                             ]
                         },
                         /* {
