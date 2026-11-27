@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', function () {
                                 { weight: '10g', price: 300.00 },
                             ]
                         },
-                         {
+                        /*  {
                             id: 'RED DRAGON🐉🔴',
                             name: 'RED DRAGON 🐉🔴',
                             farm: 'CaliDreamSelection ✅️',
@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', function () {
                                 { weight: '5g', price: 190.00 },
                                 { weight: '10g', price: 380.00 },
                             ]
-                        },
+                        }, */
                          /* {
                             id: 'COOKIES&CRÈME🍪🍦',
                             name: 'COOKIES&CRÈME 🍪🍦',
@@ -300,7 +300,7 @@ LEMON CHERRY GÉLATO🍋🍒`,
                                 { weight: '50g', price: 450.00 }
                             ]
                         },
-                        {
+                      /*   {
                             id: 'CHERRY ZONP🍒',
                             name: 'CHERRY ZONP🍒',
                             farm: 'CALI DREAM33™ 🇲🇦🇺🇸🇫🇷 PRIVATE SELECTION🔬🧪',
@@ -316,8 +316,8 @@ LEMON CHERRY GÉLATO🍋🍒`,
                                 { weight: '50g', price: 380.00 },
                                 { weight: '100g', price: 700.00 }
                             ]
-                        },
-                        {
+                        }, */
+                      /*   {
                             id: 'BLUE COOKIES🔵🍪',
                             name: 'BLUE COOKIES🔵🍪',
                             farm: 'CALI DREAM33™ 🇲🇦🇺🇸🇫🇷 PRIVATE SELECTION🔬🧪',
@@ -333,7 +333,7 @@ LEMON CHERRY GÉLATO🍋🍒`,
                                 { weight: '50g', price: 380.00 },
                                 { weight: '100g', price: 700.00 }
                             ]
-                        },
+                        }, */
                          /* {
                             id: 'BERRY MELON 🍇🍈',
                             name: 'BERRY MELON 🍇🍈',
@@ -604,7 +604,7 @@ LEMON CHERRY GÉLATO🍋🍒`,
                     image: '',
                     badgeText: '1 produit',
                     products: [
-                        {
+                       /*  {
                             id: 'STRAMBERRY LEMON🍓🍋',
                             name: 'STRAMBERRY LEMON 🍓🍋',
                             farm: 'PRIVATE SÉLECTION🔬🧪',
@@ -619,7 +619,7 @@ LEMON CHERRY GÉLATO🍋🍒`,
                                 { weight: '25g', price: 220.00 },
                                 { weight: '50g', price: 400.00 },
                             ]
-                        },
+                        }, */
                           ]
                 },
                 {
